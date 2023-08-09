@@ -1,1 +1,21 @@
-<p>breweries works!</p>
+<h1>Breweries</h1>
+
+<ul *ngIf="brews">
+  <li *ngFor="let brew of brews">
+    <p *ngIf="brew.name" class="name">
+      The name of the brewery is - {{ brew.name }}
+    </p>
+    <p *ngIf="brew.country" class="country">
+      Located in the {{ brew.country }}
+    </p>
+    <p *ngIf="brew.city" class="city">In the {{ brew.city }} city</p>
+    <p *ngIf="brew.street" class="street">On - {{ brew.street }}</p>
+    <p *ngIf="brew.website_url">
+      Learn more about this brewery on their website -
+    </p>
+    <a routerLink="`{{ brew.website_url }}`" class="website_url">
+      {{ brew.website_url }}</a
+    >
+    <hr />
+  </li>
+</ul>
