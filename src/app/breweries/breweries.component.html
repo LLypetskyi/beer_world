@@ -13,7 +13,7 @@
     <p *ngIf="brew.website_url">
       Learn more about this brewery on their website -
     </p>
-    <a routerLink="`{{ brew.website_url }}`" class="website_url">
+    <a [href]="brew.website_url" class="website_url" target="_blank">
       {{ brew.website_url }}</a
     >
     <hr />

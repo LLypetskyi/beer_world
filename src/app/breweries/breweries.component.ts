@@ -10,8 +10,7 @@ import { IBrew } from '../interfaces/brew';
 })
 export class BreweriesComponent implements OnInit {
 
-  brews!: Object;
-  // brews!: IBrew[] = [];
+  brews: IBrew[] = [];
 
   constructor(private _http: HttpService) { }
 
